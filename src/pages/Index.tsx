@@ -1,3 +1,4 @@
+import logo from "@/assets/logo.svg";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,14 +24,21 @@ const Index = () => {
   return (
     <main className="pt-16">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary/10 via-accent to-secondary py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <p className="text-sm font-medium text-primary mb-3">Suporte técnico ambiental para a engenharia da sua obra</p>
+      <section className="relative bg-gradient-to-br from-primary/10 via-accent to-secondary py-16 md:py-24 overflow-hidden">
+        {/* Watermark logo */}
+        <img src={logo} alt="" aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[700px] opacity-[0.04] pointer-events-none select-none" />
+        {/* Decorative circles */}
+        <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-primary/5 pointer-events-none" />
+        <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-primary/5 pointer-events-none" />
+        <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
+          <img src={logo} alt="Agenda do Futuro" className="h-16 md:h-20 mx-auto mb-4" />
+          <h2 className="text-xl md:text-2xl font-bold text-primary mb-2 tracking-wide">Agenda do Futuro</h2>
+          <p className="text-sm font-medium text-primary/80 mb-3">Suporte técnico ambiental para a engenharia da sua obra</p>
           <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-4">
             Impactos Ambientais Controlados e Mitigados.
           </h1>
           <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Sua engenharia tranquila enquanto cuidamos da gestão ambiental. Certificações <strong>LEED/AQUA</strong>, eficiência operacional, reuso de água, energia e redução de emissões de carbono.
+            Sua engenharia tranquila enquanto cuidamos da gestão ambiental.
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 py-6">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
@@ -46,8 +54,9 @@ const Index = () => {
       </section>
 
       {/* Projetos */}
-      <section id="projetos" className="py-16 md:py-20">
-        <div className="container mx-auto px-4">
+      <section id="projetos" className="relative py-16 md:py-20 overflow-hidden">
+        <img src={logo} alt="" aria-hidden="true" className="absolute bottom-0 right-0 w-72 opacity-[0.03] pointer-events-none select-none translate-x-1/4 translate-y-1/4" />
+        <div className="container mx-auto px-4 relative z-10">
           <p className="text-sm font-medium text-primary text-center mb-2">Experiência Comprovada</p>
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-3">Projetos de Destaque</h2>
           <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">

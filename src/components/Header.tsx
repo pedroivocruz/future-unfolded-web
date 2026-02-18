@@ -25,8 +25,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex-shrink-0">
-          <img src={logo} alt="Agenda do Futuro" className="h-8" />
+        <Link to="/" className="flex-shrink-0 flex items-center gap-3">
+          <img src={logo} alt="Agenda do Futuro" className="h-10" />
+          <span className="text-lg font-bold text-foreground tracking-tight">Agenda do Futuro</span>
         </Link>
 
         {/* Desktop */}
