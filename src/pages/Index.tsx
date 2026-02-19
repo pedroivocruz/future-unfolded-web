@@ -2,7 +2,7 @@ import logo from "@/assets/logo.svg";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, ClipboardCheck, FileCheck, Eye, MapPin } from "lucide-react";
+import { ArrowRight, CheckCircle, ClipboardCheck, FileCheck, Eye, MapPin, Leaf } from "lucide-react";
 import { PROJECTS, WHATSAPP_URL } from "@/lib/constants";
 
 const badges = [
@@ -24,56 +24,61 @@ const Index = () => {
   return (
     <main className="pt-16">
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-primary/10 via-accent to-secondary py-16 md:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary py-20 md:py-28 overflow-hidden">
         {/* Watermark logo */}
-        <img src={logo} alt="" aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[700px] opacity-[0.04] pointer-events-none select-none" />
-        {/* Decorative circles */}
-        <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-primary/5 pointer-events-none" />
-        <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-primary/5 pointer-events-none" />
+        <img src={logo} alt="" aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] opacity-[0.03] pointer-events-none select-none" />
+        {/* Decorative elements */}
+        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-primary/8 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full bg-accent/20 blur-2xl pointer-events-none" />
+        <div className="absolute top-10 right-10 w-3 h-3 rounded-full bg-primary/20 pointer-events-none" />
+        <div className="absolute bottom-20 left-20 w-2 h-2 rounded-full bg-accent/40 pointer-events-none" />
         <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
-          <img src={logo} alt="Agenda do Futuro" className="h-16 md:h-20 mx-auto mb-4" />
-          <h2 className="text-xl md:text-2xl font-bold text-primary mb-2 tracking-wide">Agenda do Futuro</h2>
-          <p className="text-sm font-medium text-primary/80 mb-3">Suporte técnico ambiental para a engenharia da sua obra</p>
+          <img src={logo} alt="Agenda do Futuro" className="h-20 md:h-24 mx-auto mb-4" />
+          <h2 className="text-2xl md:text-3xl font-extrabold text-primary mb-2 tracking-wide uppercase">Agenda do Futuro</h2>
+          <p className="text-sm font-medium text-muted-foreground mb-6">Suporte técnico ambiental para a engenharia da sua obra</p>
           <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-4">
             Impactos Ambientais Controlados e Mitigados.
           </h1>
           <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Sua engenharia tranquila enquanto cuidamos da gestão ambiental.
           </p>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 py-6">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 py-6 shadow-lg">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               Solicitar Proposta via WhatsApp <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
           <div className="flex flex-wrap justify-center gap-2 mt-8">
             {badges.map((b) => (
-              <Badge key={b} variant="secondary" className="text-xs">{b}</Badge>
+              <Badge key={b} variant="secondary" className="text-xs border border-primary/15">{b}</Badge>
             ))}
           </div>
         </div>
       </section>
 
       {/* Projetos */}
-      <section id="projetos" className="relative py-16 md:py-20 overflow-hidden">
-        <img src={logo} alt="" aria-hidden="true" className="absolute bottom-0 right-0 w-72 opacity-[0.03] pointer-events-none select-none translate-x-1/4 translate-y-1/4" />
+      <section id="projetos" className="relative py-16 md:py-20 overflow-hidden bg-secondary">
+        <img src={logo} alt="" aria-hidden="true" className="absolute bottom-0 right-0 w-72 opacity-[0.04] pointer-events-none select-none translate-x-1/4 translate-y-1/4" />
         <div className="container mx-auto px-4 relative z-10">
-          <p className="text-sm font-medium text-primary text-center mb-2">Experiência Comprovada</p>
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Leaf className="h-4 w-4 text-primary" />
+            <p className="text-sm font-medium text-primary">Experiência Comprovada</p>
+          </div>
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-3">Projetos de Destaque</h2>
           <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">
             Conheça alguns dos projetos onde aplicamos nossa metodologia de gestão ambiental
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {PROJECTS.map((p) => (
-              <Card key={p.title} className="border border-border hover:shadow-md transition-shadow">
+              <Card key={p.title} className="bg-card border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300">
                 <CardContent className="p-5">
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {p.tags.map((t) => (
-                      <Badge key={t} variant="outline" className="text-xs font-normal">{t}</Badge>
+                      <Badge key={t} className="text-xs font-normal bg-primary/10 text-primary border-0">{t}</Badge>
                     ))}
                   </div>
                   <h3 className="font-semibold text-base mb-1">{p.title}</h3>
                   <p className="text-xs text-muted-foreground flex items-center gap-1 mb-3">
-                    <MapPin className="h-3 w-3" /> {p.location}
+                    <MapPin className="h-3 w-3 text-primary/60" /> {p.location}
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
                 </CardContent>
@@ -84,7 +89,7 @@ const Index = () => {
       </section>
 
       {/* Metodologia */}
-      <section id="metodologia" className="py-16 md:py-20 bg-secondary">
+      <section id="metodologia" className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <p className="text-sm font-medium text-primary text-center mb-2">Nossa Metodologia</p>
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-3">Gestão ambiental que funciona no canteiro</h2>
