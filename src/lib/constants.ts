@@ -2,7 +2,7 @@ export const WHATSAPP_URL = "https://wa.me/5511976835964?text=Ol%C3%A1%2C%20gost
 
 export const PROJECTS = [
   {
-    tags: ["Certificação LEED", "250 mil m²"],
+    tags: ["Certificação AQUA-HQE", "250 mil m²"],
     title: "GLP GRU III – Condomínio Logístico",
     location: "Guarulhos/SP",
     description: "Atuação na gestão dos requisitos LEED durante a fase de obras, apoiando a construtora no controle ambiental do canteiro, na gestão de resíduos e no atendimento às exigências da certificação em empreendimentos logísticos de grande escala.",
