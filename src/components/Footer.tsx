@@ -23,14 +23,22 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-semibold mb-3 text-sm">Contato</h4>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors"
-          >
-            WhatsApp
-          </a>
+          <div className="flex flex-col gap-3">
+            <a
+              href="mailto:contato@agendadofuturo.com"
+              className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+            >
+              contato@agendadofuturo.com
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors w-fit"
+            >
+              WhatsApp
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center text-xs text-primary-foreground/50">
