@@ -2,7 +2,7 @@ export const WHATSAPP_URL = "https://wa.me/5511976835964?text=Ol%C3%A1%2C%20gost
 
 export const PROJECTS = [
   {
-    tags: ["Certificação AQUA-HQE", "250 mil m²"],
+    tags: ["Certificação LEED", "250 mil m²"],
     title: "GLP GRU III – Condomínio Logístico",
     location: "Guarulhos/SP",
     description: "Atuação na gestão dos requisitos LEED durante a fase de obras, apoiando a construtora no controle ambiental do canteiro, na gestão de resíduos e no atendimento às exigências da certificação em empreendimentos logísticos de grande escala.",
@@ -14,7 +14,7 @@ export const PROJECTS = [
     description: "Suporte técnico ao processo de certificação LEED Gold, com acompanhamento de obra, verificação de conformidades e organização da documentação necessária para um edifício corporativo de alto padrão.",
   },
   {
-    tags: ["Certificação LEED", "Cultural e Esportivo"],
+    tags: ["Certificação AQUA-HQE", "Cultural e Esportivo"],
     title: "SESC São Bernardo do Campo",
     location: "ABC/SP",
     description: "Acompanhamento ambiental em obra com foco no atendimento aos requisitos PROCEL e AQUA-HQE, contribuindo para a adoção de práticas sustentáveis, gestão eficiente de recursos e conformidade ambiental.",
