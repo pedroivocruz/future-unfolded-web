@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-base: "/future-unfolded-web/",  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+base: /web/",  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
