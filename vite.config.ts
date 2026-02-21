@@ -12,8 +12,8 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-base: /web/",  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  resolve: {
+  base: "/web/",
+  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),  resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
